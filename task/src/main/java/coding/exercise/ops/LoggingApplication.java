@@ -35,7 +35,9 @@ public class LoggingApplication {
 				fileName = args[0];
 				logger.info("FilePath taken from command line");
 			}
+
 			Map<String, Event> EventMap = app.readFromFile(fileName);
+
 			HsqldbUtil createTableUtil = new HsqldbUtil();
 			createTableUtil.createTable();
 			for (String key : EventMap.keySet()) {
@@ -49,5 +51,7 @@ public class LoggingApplication {
 			logger.debug("{}",e.getMessage());
 		}
 	}
+	public static void flagLongEvents(Map<String, Event> EventMap){
 
+	}
 }

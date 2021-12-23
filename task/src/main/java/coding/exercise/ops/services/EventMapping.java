@@ -1,13 +1,18 @@
 package coding.exercise.ops.services;
 
+import coding.exercise.ops.LoggingApplication;
 import coding.exercise.ops.constants.AppConstants;
 import coding.exercise.ops.model.Event;
 import coding.exercise.ops.model.IncomingJson;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class EventMapping {
+    private static final Logger logger = LogManager.getLogger(EventMapping.class);
+
     private Map<String, Event> map;
 
     public EventMapping(){
@@ -49,8 +54,12 @@ public class EventMapping {
     private void addEventToMap(Event event,String eventId,int startTimeStamp, int endTimeStamp){
         int duration = endTimeStamp-startTimeStamp;
         duration = (duration < 0 ? -duration : duration); // if difference happens to be negative
+
         event.setDuration(duration);
         event.setAlert(checkAlert(duration));
+
+        // flag event that is particularly long
+        checkEventAndflag(event,duration);
         map.put(eventId, event);
     }
     // returns boolean for flag field
@@ -61,6 +70,13 @@ public class EventMapping {
     // returns the Events map
     public Map<String, Event> getMap(){
         return map;
+    }
+
+    // returns the Events map
+    public void checkEventAndflag(Event event, int duration){
+        if (checkAlert(duration)){
+            logger.info("Event Flagged. Duration={} for event-{}",duration,event);
+        }
     }
 
 }
