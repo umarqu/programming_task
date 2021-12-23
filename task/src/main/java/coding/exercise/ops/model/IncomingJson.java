@@ -1,4 +1,4 @@
-package coding.test.ops.model;
+package coding.exercise.ops.model;
 
 import lombok.*;
 

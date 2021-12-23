@@ -1,8 +1,8 @@
-package coding.test.ops.services;
+package coding.exercise.ops.services;
 
-import coding.test.ops.constants.AppConstants;
-import coding.test.ops.model.Event;
-import coding.test.ops.model.IncomingJson;
+import coding.exercise.ops.constants.AppConstants;
+import coding.exercise.ops.model.Event;
+import coding.exercise.ops.model.IncomingJson;
 
 import java.util.HashMap;
 import java.util.Map;

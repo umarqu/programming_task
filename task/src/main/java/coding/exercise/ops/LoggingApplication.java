@@ -1,9 +1,9 @@
-package coding.test.ops;
+package coding.exercise.ops;
 
-import coding.test.ops.constants.AppConstants;
-import coding.test.ops.model.Event;
-import coding.test.ops.utils.FileReaderUtil;
-import coding.test.ops.utils.HsqldbUtil;
+import coding.exercise.ops.constants.AppConstants;
+import coding.exercise.ops.model.Event;
+import coding.exercise.ops.utils.FileReaderUtil;
+import coding.exercise.ops.utils.HsqldbUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;

@@ -1,4 +1,4 @@
-package coding.test.ops.constants;
+package coding.exercise.ops.constants;
 
 /* Class contains constant values for the application */
 public class AppConstants {

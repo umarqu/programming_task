@@ -1,7 +1,7 @@
-package coding.test.ops.utils;
+package coding.exercise.ops.utils;
 
-import coding.test.ops.constants.AppConstants;
-import coding.test.ops.model.Event;
+import coding.exercise.ops.constants.AppConstants;
+import coding.exercise.ops.model.Event;
 import org.apache.logging.log4j.*;
 import java.sql.*;
 
